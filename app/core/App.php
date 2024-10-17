@@ -9,11 +9,11 @@ class App{
     public function __construct()
     {
         $url = $this->parseURL();
-        
-        // controller
-        if( file_exists('../app/controllers/' . $url[0] . '.php') ) {
-            $this->controller = $url[0];
-            unset($url[0]);
+        if($url !== null && isset($url[0])){
+            if(file_exists('../app/controllers/' . ucfirst($url[0]) . '.php') ) {
+                $this->controller = ucfirst($url[0]);
+                unset($url[0]);
+            }
         }
 
         require_once '../app/controllers/' . $this->controller . '.php';
@@ -43,5 +43,6 @@ class App{
             $url = explode('/', $url);
             return $url;
         }
+        return null;
     }
 }
