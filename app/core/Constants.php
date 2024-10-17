@@ -1,3 +1,3 @@
 <?php
 
-define('BASEURL', 'http://mvc-web.test/');
+define('BASEURL', 'http://mvc-web.test');
