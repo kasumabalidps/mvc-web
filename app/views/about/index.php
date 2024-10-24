@@ -1,6 +1,6 @@
 <div class="container py-5">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
             <img src="<?= BASEURL; ?>/img/image.png" alt="Foto Profil" class="img-fluid rounded mb-4 shadow-lg">
         </div>
         <div class="col-lg-6">
